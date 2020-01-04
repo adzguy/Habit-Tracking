@@ -14,7 +14,7 @@ struct Habit: Identifiable, Codable {
     //var activity : String
     var title: String
     var description: String
-    var count: Int
+    var count: String
 }
 
 class Activities: ObservableObject {
@@ -46,17 +46,24 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List{
-                ForEach(activities.activities) { activity in
+                ForEach(self.activities.activities){ activity in
                     NavigationLink(destination: DetailView(activity: activity)) {
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("\(activity.title)")
-                                .font(.headline)
-                            Text("\(activity.description)")
+                        ZStack {
+                            RectangleView()
+                            
+                            VStack (spacing: 5){
+                                Text("\(activity.title)")
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                Text("\(activity.description)")
+                                    .foregroundColor(.white)
+                            }
                         }
                     }
                 }
-                .onDelete(perform: removeHabit)
+                .onDelete(perform: self.removeHabit)
             }
+            .environment(\.defaultMinListRowHeight, 120)
             .navigationBarTitle("Habit Tracker")
             .navigationBarItems(leading: EditButton(), trailing: Button(action: {
                 

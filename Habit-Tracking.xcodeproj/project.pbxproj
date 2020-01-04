@@ -15,6 +15,7 @@
 		253025C623BEC60900160C80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253025C423BEC60900160C80 /* LaunchScreen.storyboard */; };
 		253025CE23BECDD400160C80 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253025CD23BECDD400160C80 /* AddView.swift */; };
 		253025D023BF36E000160C80 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253025CF23BF36DF00160C80 /* DetailView.swift */; };
+		253025D223BFFDF700160C80 /* RectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253025D123BFFDF700160C80 /* RectangleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		253025C723BEC60900160C80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		253025CD23BECDD400160C80 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		253025CF23BF36DF00160C80 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		253025D123BFFDF700160C80 /* RectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				253025B923BEC60600160C80 /* AppDelegate.swift */,
 				253025BB23BEC60600160C80 /* SceneDelegate.swift */,
 				253025BD23BEC60600160C80 /* ContentView.swift */,
+				253025D123BFFDF700160C80 /* RectangleView.swift */,
 				253025CD23BECDD400160C80 /* AddView.swift */,
 				253025CF23BF36DF00160C80 /* DetailView.swift */,
 				253025BF23BEC60900160C80 /* Assets.xcassets */,
@@ -154,6 +157,7 @@
 			files = (
 				253025CE23BECDD400160C80 /* AddView.swift in Sources */,
 				253025BA23BEC60600160C80 /* AppDelegate.swift in Sources */,
+				253025D223BFFDF700160C80 /* RectangleView.swift in Sources */,
 				253025BC23BEC60600160C80 /* SceneDelegate.swift in Sources */,
 				253025D023BF36E000160C80 /* DetailView.swift in Sources */,
 				253025BE23BEC60600160C80 /* ContentView.swift in Sources */,

@@ -12,25 +12,48 @@ struct DetailView: View {
     
     var activity: Habit
     @State private var count = 0
+    @State private var color = false
     
     var body: some View {
         VStack{
-            Text("\(activity.description)")
-                .fontWeight(.medium)
-            Text("Count: \(activity.count)")
+            ZStack{
+                RectangleView()
+                    //.frame(width: 350, height: 250)
+                VStack{
+                    Text("Description:")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    Text("\(activity.description)")
+                    .italic()
+                        .fontWeight(.medium)
+                        .foregroundColor(.white)
+                        .padding()
+                    Text("Count: \(count)")
+                        .foregroundColor(.white)
+                        .font(.footnote)
+                    
+                }
+
+            }
             
             Button(action: {
                 self.addCount()
-            }, label: {
-                Text("+1")
+                self.color = true
             })
+            {
+                Text("+1")
+                    .frame(width: 60, height: 60)
+                    .background(Color(#colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)))
+                .clipShape(Circle())
+                .shadow(color: .gray, radius: 10, x: 10, y: 10)
+            }
+            
+            Spacer()
         }
     }
     
     func addCount() {
-        let counter = count + 1
-        //activity count is immutable. How do we solce this???
-        activity.count = counter
+        count = count + 1
     }
 }
 

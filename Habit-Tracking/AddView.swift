@@ -15,7 +15,7 @@ struct AddView: View {
     @ObservedObject var activities = Activities()
     @State private var title = ""
     @State private var description = ""
-    @State private var count = 0
+    @State private var count = "0"
     @State private var showAlert = false
     
     var body: some View {
@@ -27,6 +27,7 @@ struct AddView: View {
             
                     TextField("Description", text: $description)
                         .font(.body)
+
                 }
             }
             .navigationBarTitle("Add New Activity")
